@@ -67,7 +67,7 @@ namespace Bastet{
 
   Queue BastetBlockChooser::GetStartingQueue(){
     Queue q;
-    //The first block is always I,J,L,T (cfr. Tetris guidelines, Bastet is a gentleman and chooses the most favorable start for the user).
+    //The first block is always I,J,L,T,W (cfr. Tetris guidelines, Bastet is a gentleman and chooses the most favorable start for the user).
     BlockType first;
     switch(random()%4){
     case 0:
@@ -78,6 +78,8 @@ namespace Bastet{
       first=L;break;
     case 3:
       first=T;break;
+    case 4:
+      first=W;break;
     }
     q.push_back(first);
     q.push_back(BlockType(random()%nBlockTypes));
@@ -187,6 +189,8 @@ namespace Bastet{
       first=L;break;
     case 3:
       first=T;break;
+    case 4:
+      first=W;break;
     }
     q.push_back(first);
     return q;

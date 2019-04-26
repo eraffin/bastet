@@ -49,9 +49,9 @@ namespace Bastet{
     RecursiveVisitor();
     virtual ~RecursiveVisitor();
     virtual void Visit(BlockType b, const Well *well, Vertex v);
-    const boost::array<long,7> &GetScores() const{return _scores;}
+    const boost::array<long,8> &GetScores() const{return _scores;}
   private:
-    typedef boost::array<long,7> ScoresList;
+    typedef boost::array<long,8> ScoresList;
     ScoresList _scores;
   };
 
@@ -91,7 +91,7 @@ namespace Bastet{
     /**
      * computes "scores" of the candidate next blocks by dropping them in all possible positions and choosing the one that has the least max_(drop positions) Evaluate(well)
      */
-    boost::array<long,7> ComputeMainScores(const Well *well, BlockType currentBlock);
+    boost::array<long,8> ComputeMainScores(const Well *well, BlockType currentBlock);
     
   private:
     

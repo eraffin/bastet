@@ -118,7 +118,21 @@ namespace Bastet{
 		    {0,2},{0,1},{1,1},{2,1}
 		  }},
 		  {{//orientation 3
-	  {1,2},{1,1},{0,0},{1,0}
+		      {1,2},{1,1},{0,0},{1,0}
+		    }}
+	  }}),
+      BlockImpl(COLOR_PAIR(8),(OrientationMatrix){{ //W!
+	    {{//orientation 0 (initial
+		{0,1},{1,1},{2,1},{1,0}
+	      }},
+	      {{//orientation 1
+		  {0,1},{1,1},{2,1},{3,1}
+		}},
+		{{//orientation 2
+		    {0,1},{1,1},{1,0},{2,0}
+		  }},
+		  {{//orientation 3
+		      {1,2},{1,1},{0,0},{1,0}
 		    }}
 	  }})
     }};
@@ -130,7 +144,7 @@ namespace Bastet{
     return blocks[b].GetColor();
   }
   const char GetChar(BlockType b){
-    return "OIZTJSL"[int(b)];
+    return "OIZTJSLW"[int(b)];
   }
 
   size_t hash_value(const Dot &d){

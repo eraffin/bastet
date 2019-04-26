@@ -60,9 +60,10 @@ namespace Bastet{
     T=3,
     J=4,
     S=5,
-    L=6
+    L=6,
+    W=7
   };
-  const size_t nBlockTypes=7;
+  const size_t nBlockTypes=8;
 
   struct Dot;
 
@@ -112,7 +113,7 @@ namespace Bastet{
     Color GetColor() const {return _color;};
   };
 
-  typedef boost::array<BlockImpl,7> BlockArray;
+  typedef boost::array<BlockImpl,8> BlockArray;
   extern BlockArray blocks;
 
   //should be members, but BlockType is an enum...
